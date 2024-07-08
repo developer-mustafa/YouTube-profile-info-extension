@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 
-import ChannelInfo from "../../components/channel-info"
-import CloseButton from "../../components/close-button"
-import Modal from "../../components/modal"
-import OpenButton from "../../components/open-button"
-import { channelInfo } from "../../data/contents"
+import ChannelInfo from "../../components/channel-info/channel-info"
+import CloseButton from "../../components/channel-info/channel-close-button"
+import Modal from "../../components/channel-info/channel-info-modal"
+import OpenButton from "../../components/channel-info/channel-open-button"
+import { channelInfo } from "../../data/channel-info-constants"
 
 type ChannelData = {
   email: string
@@ -72,9 +72,9 @@ const ChannelInfoFeature = () => {
           <div className="flex justify-end">
             <CloseButton onClick={handleCloseModal} />
           </div>
-          <h2 className="text-3xl font-bold mb-6">About</h2>
-          <h2 className="text-3xl font-bold mb-6">Links</h2>
-          <h2 className="text-3xl font-bold mb-6">Channel Information</h2>
+          <h2 className="text-3xl font-bold mb-4">About</h2>
+          <p className="text-xl">brings you the latest in technology, gadgets, and software reviews. Stay updated with weekly tutorials, in-depth analyses, and tech news. Join our community of tech enthusiasts and enhance your digital knowledge. Don't forget to subscribe for more tech insights and tips!</p>
+          <h2 className="text-3xl font-bold mb-6 mt-6">Channel Information</h2>
           {error && (
             <div className="text-white p-2 mb-4 text-2xl bg-red-400 rounded-md">
               {error}
